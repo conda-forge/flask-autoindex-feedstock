@@ -1,14 +1,14 @@
 {% set name = "Flask-AutoIndex" %}
 {% set version = "0.6.2" %}
 {% set hash = "af2cdb34eefe6edbf43ce19200880829e8c2df3598000e75dc63c9b7e3478706" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
@@ -18,16 +18,18 @@ build:
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
 
   run:
-    - python
+    - python >={{ python_min }}
     - flask >=0.8,<0.12
     - flask-silk >=0.2
     - future >=0.13.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - flask_autoindex
 
