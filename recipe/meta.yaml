@@ -1,6 +1,6 @@
 {% set name = "Flask-AutoIndex" %}
-{% set version = "0.6.2" %}
-{% set hash = "af2cdb34eefe6edbf43ce19200880829e8c2df3598000e75dc63c9b7e3478706" %}
+{% set version = "0.6.5" %}
+{% set hash = "199bb155028272b9f10d2d9e3b1cbbdf54b73cbe8921a2c7578072fab1fdbe5d" %}
 {% set build = 0 %}
 
 package:
@@ -36,7 +36,7 @@ about:
   license_file: LICENSE
   license: BSD-3-Clause
   license_family: BSD
-  summary: 'Generates index page like mod_autoindex'
+  summary: Generates index page like mod_autoindex
   dev_url: https://github.com/sublee/flask-autoindex
 
 extra:
